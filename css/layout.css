@@ -1,51 +1,111 @@
 
+/* style my nav bar */
+.topnavblog {
+  background: #222;
+  padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 
-
-
-
-
-
-/* Style the top navigation bar */
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-
-p, 
-ul {
-  border: 2px solid rebeccapurple;
-  padding: .5em;
 }
 
-p, 
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0%;
+}
+
+li {
+  position: sticky;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+  color: white;
+}
+
+/*change color for active page+have to apply to ea page*/
+.active {
+  background-color: #7973ea;
+}
+
+/*flexboxes the whole card class*/
+.cards {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 100px; 
+  background-color: rgb(152, 197, 182);
+}
+.card {
+  background-color: rgb(245, 247, 247);
+  width: 200px;
+  margin: 10px;
+  border: 10px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card .text {
+  border: 0;
+  padding: 0 20px 1%;
+  width: 100%;
+}
+
+/*outline for table*/
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+footer {
+display: flex;
+flex-direction:  column;
+min-height: 100vh;
+
+
+
+
+}
 
 .box {
+  
   border: 5px solid rebeccapurple;
   background-color: lightgray;
   padding: 40px;
   margin: 40px;
-  width: 300px;
+  width: auto;
   height: 150px;
+  display: flex;
+  overflow: auto;
+  border-color: rebeccapurple;
+  border-style: solid;
+  border-width: 0cap;
+  border-radius: 10%;
 }
-p,
+
+
 .article {
   border: 5px solid rebeccapurple;
   background-color: lightgray;
@@ -55,23 +115,74 @@ p,
   height: 150px;
 }
 
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20%;
 
-.Trivia {
-    background-color: yellow;
-  }
+}
 
-  
-  img {
-    max-width: 25%;
-    max-height:20%;
-    float: left;
-  }
-  
-  .text {
-    font-size: 20px;
-    padding-left: 20px;
-    padding-top: 20%;
-    float: left;
-  }
+.zeppo_marx {
+  background-color: black;
+  float: left;
+  clear: both;
+}
 
-  
+.trivia {
+  background-color: black;
+  float: right;
+  clear: both;
+}
+
+.death {
+  background-color: black;
+  float: left;
+  clear: both;
+
+}
+
+.early {
+  background-color: black;
+  float: right;
+  clear: both;
+}
+
+
+/* Add padding BETWEEN each column */
+.row,
+.row>.column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
